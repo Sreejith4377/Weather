@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking the weather of every state by API  done by SREEJITH</title>
+    <link rel="stylesheet" href="./layers/css/weather.css">
+    <link rel="shortcut icon" href="./layers/images/weather logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bgimage">
+        <div class="gridlayout">
+            <h1 class="weather">CHECK TODAY WEATHER</h1>
+           
+            <input type="text" id="input" class="inputbox">
+            <button id="btn" >Search</button>
+            <h1 id="place"></h1>
+        </div>
+        <script>
+            let input = document.getElementById("input");
+    
+            let btn = document.getElementById("btn");
+            btn.addEventListener("click", function() {
+    
+    
+                
+                fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=metric&appid=fc769a5605837af7fe06844eadb034df')
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                        document.getElementById("place").innerHTML = data.main.temp + "°c";
+                    })
+            })
+        </script>
+
+    </div>
+    
+    
+</body>
+</html>

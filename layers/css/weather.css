@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.gridlayout{
+    margin: auto;
+    width: 90%;
+}
+
+.bgimage{
+    background: url(../images/climatebg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 650px;
+    /* margin-top: 10px; */
+    margin-left: -35px;
+}
+.weather{
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+  
+}
+.inputbox{
+    height: 25px;
+    margin-left: 500px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+#place{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+#btn{
+    padding: 5px 25px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
